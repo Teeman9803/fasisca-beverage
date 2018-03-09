@@ -36,11 +36,11 @@ body {
 .overlay {
 	height: 100%;
 	width: 100%;
-	background: #12297d;
+	background: #000;
 	position: absolute;
 	top: 0;
 	z-index: 2;
-	opacity: .5;
+	opacity: .3;
 }
 
 .content {
