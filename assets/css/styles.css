@@ -28,27 +28,16 @@ body {
 	font-family: "Open Sans", sans-serif;
 	line-height: 1.5;
 	color: #ffffff;
+	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/water-blue-ocean.jpg');
+	background-size: cover;
 }
 
 /* =============================================================================
   CONTENT
 ============================================================================= */
-.overlay {
-	height: 100%;
-	width: 100%;
-	background: #000;
-	position: absolute;
-	top: 0;
-	z-index: 2;
-	opacity: .3;
-}
-
 .content {
-	position: relative;
-	top: 30%;
-	z-index: 2;
-	margin: 0 auto;
-	max-width: 720px;
+	width: 70%;
+	margin: 40px auto;
 	text-align: center;
 }
 
@@ -58,10 +47,16 @@ body {
 	font-size: 44px;
 }
 
+.content__heading img {
+	position: relative;
+	left: 15px;
+}
+
 .content__teaser {
-	margin-bottom: 24px;
-	font-size: 22px;
-	letter-spacing: 1px;
+	width: 80%;
+	margin: 20px auto;
+	font-size: 17px;
+	letter-spacing: .5px;
 }
 
 .content__cta {
@@ -76,21 +71,14 @@ body {
 
 .copyright {
 	margin: 20px 0;
+	font-size: 14px;
 }
 
 /* =============================================================================
   VIDEO
 ============================================================================= */
 .video {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	z-index: 1;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
+	max-width: 100%;
 	height: auto;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	z-index: 1;
 }
