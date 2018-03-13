@@ -28,46 +28,12 @@ body {
 	font-family: "Open Sans", sans-serif;
 	line-height: 1.75;
 	color: #ffffff;
-	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/water-blue-ocean.jpg');
-	background-size: cover;
+	background-color: #000;
 }
 
 /* =============================================================================
   CONTENT
 ============================================================================= */
-.content {
-	width: 70%;
-	margin: 40px auto;
-	text-align: center;
-}
-
-.content__heading {
-	margin-bottom: 24px;
-	color: #272727;
-	font-size: 44px;
-}
-
-.content__heading img {
-	position: relative;
-	left: 15px;
-}
-
-.content__teaser {
-	width: 80%;
-	margin: 20px auto;
-	font-size: 16px;
-	letter-spacing: .5px;
-}
-
-.content__cta {
-	display: inline-block;
-	margin: 0;
-	padding: 12px 48px;
-	color: #ff3c64;
-	font-size: 22px;
-	text-decoration: none;
-	border: solid 4px #ff3c64;
-}
 
 .copyright {
 	margin: 20px 0;
@@ -77,11 +43,27 @@ body {
 /* =============================================================================
   VIDEO
 ============================================================================= */
-.video {
+.flex-row {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 	width: 100%;
-	height: auto;
 	z-index: 1;
-	background-color: #fff;
-	border: 8px solid;
 }
 
+.container {
+	width: 100%; /* Or whatever you want it to be */
+	height: 100%; /* Or whatever you want it to be */
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+
+#fasisca-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 2;
+}

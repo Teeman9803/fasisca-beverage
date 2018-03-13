@@ -9,42 +9,40 @@
 	<meta name="author" description="Tee Lewis">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/styles.css">
+	<script src="assets/js/scripts.js"></script>
 </head>
 <body>
-<div class="overlay"></div>
-<main class="content">
-	<div class="content__heading">
-		<img width="250" src="assets/images/neck-image.png" alt="The World's Sexiest Water">
+<div class="flex-row">
+	<img id="loader" src="assets/images/giphy.gif" alt="Loading" width="50">
+</div>
+<div class="fullscreen-bg container">
+	<video autoplay data-object-fit="cover" id="fasisca-video" class="fullscreen-bg__video">
+		<source src="media/water%20ii.mp4" type='video/mp4'>
+		<source src="media/water%20ii.webm" type='video/webm'>
+		Your browser does not support the video tag.
+	</video>
+	<div class="controls">
+		<button style="display: none;" id="play-pause" type="button"></button>
 	</div>
-	<video id="my-video" class="video"loop>
-		<source src="media/water%20ii.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-		<source src="media/water%20ii.webm" type='video/webm;codecs="vp8, vorbis"'>
-	</video><!-- /video -->
-	<p class="content__teaser">Fasisca Beverage Company presents Fasisca's Alkaline Water, the worlds sexiest water. Consectetur adipisicing elit. Suscipit qui voluptatum enim est deserunt assumenda, aspernatur quam!</p>
-	<p class="copyright">
-		&copy; Copyright Fasisca Beverage Company 2018
-	</p>
-</main><!-- /content -->
+</div>
+<script>
+  (function() {
+    var video = document.getElementById("fasisca-video");
+    var playButton = document.getElementById("play-pause");
+    var loader = document.getElementById("loader");
 
+    function addEventHandler(elem,eventType,handler) {
+      if (elem.addEventListener)
+        elem.addEventListener (eventType,handler,false);
+      else if (elem.attachEvent)
+        elem.attachEvent ('on'+eventType,handler);
+    }
 
+    addEventHandler(playButton, 'click', function() {
+      video.play();
+    })
 
-<script async>
-	(function() {
-		/**
-		 * Video element
-		 * @type {HTMLElement}
-		 */
-		var video = document.getElementById("my-video");
-    video.volume = 1;
-
-		/**
-		 * Check if video can play, and play it
-		 */
-		video.addEventListener( "canplay", function() {
-			video.play();
-		});
-	})();
+  })();
 </script>
-
 </body>
 </html>
